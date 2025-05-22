@@ -1,116 +1,163 @@
-.game{
-    display: none;
+.game {
+	display: none;
 }
-#gridCanvas{
-    position: relative;
-    z-index: auto;
-    flex: 1 1 auto;
-    margin: 8;
-    top: 0;
-    left: 0;
+
+#gridCanvas {
+	position: relative;
+	z-index: auto;
+	flex: 1 1 auto;
+	margin: 8;
+	top: 0;
+	left: 0;
 }
-#playerlist>div{
-    color: darkblue;
+
+#playerlist>div {
+	color: darkblue;
 }
-#motd{
-    color:#b83939 !important;
+
+#motd {
+	color: #b83939 !important;
 }
-#selfplayer{
-    color: lightblue !important;
+
+#selfplayer {
+	color: lightblue !important;
 }
-#playerlist{
-    background-color: #292929;
-    position: fixed;
-    z-index: 2;
-    top: 8px;
-    left: 42%;
-    width: 16%;
-    opacity: 0.7;
-    display: none;
+
+#playerlist {
+	background-color: #292929;
+	position: fixed;
+	z-index: 2;
+	top: 8px;
+	left: 42%;
+	width: 16%;
+	opacity: 0.7;
+	display: none;
 }
-.chatarea>div{
-    visibility: hidden;
-    display: none;
+
+.chatarea>div {
+	visibility: hidden;
+	display: none;
 }
-.chatarea:hover>div{
-    visibility: visible;
-    display:block;
+
+.chatarea:hover>div {
+	visibility: visible;
+	display: block;
 }
-.colors{
-    position: fixed;
-    background-color: #494949;
-    color:white;
-    right:0;
-    top:0;
+
+.colors {
+	position: fixed;
+	background-color: #494949;
+	color: white;
+	right: 0;
+	top: 0;
 }
-.chatarea{
-    background-color: #292929;
-    position: fixed;
-    left: 0;
-    bottom: -35px;
-    color: white;
-    border-radius: 15px;
-    border-color: white;
-    border-style: groove;
-    opacity: 0.7;
-    padding: 10px;
-    transition: 200ms;
+
+.chatarea {
+	background-color: #292929;
+	position: fixed;
+	left: 0;
+	bottom: -35px;
+	color: white;
+	border-radius: 15px;
+	border-color: white;
+	border-style: groove;
+	opacity: 0.7;
+	padding: 10px;
+	transition: 200ms;
 }
-.chatarea:hover{
-    bottom: 0;
+
+.chatarea:hover {
+	bottom: 0;
 }
-.chatarea>textarea{
-    resize:none;
-    width:50%;
-    height:18px;
+
+.chatarea>textarea {
+	resize: none;
+	width: 50%;
+	height: 18px;
 }
-body{
-    height: 100vh;
-    display: flex;
-    flex-flow: column;
-    overflow: hidden;
-    background-color: gray;
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-flow: column;
+	overflow: hidden;
+	background-color: gray;
 }
+
 button.disconnect {
-    border-color: #b83939;
+	border-color: #b83939;
 }
+
 button.right {
-    margin: 80%;
-    margin-top: 10px;
-    margin-bottom: 0%;
+	margin: 80%;
+	margin-top: 10px;
+	margin-bottom: 0%;
 }
+
 button {
-    color: #ecf0f1;
-    text-decoration: none;
-    background-color: #292929;
-    padding: 8px 12px;
-    border-radius: 5px;
-    border-color: #ffffff;
-    border-style: solid;
+	color: #ecf0f1;
+	text-decoration: none;
+	background-color: #292929;
+	padding: 8px 12px;
+	border-radius: 5px;
+	border-color: #ffffff;
+	border-style: solid;
 }
+
 button:hover {
-    background-color: #696969;
+	background-color: #696969;
 }
+
 button:active {
-    transform: scale(0.8);
+	transform: scale(0.8);
 }
+
 dialog {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #494949;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 90%; /* Adjust based on your design */
-    width: 400px; /* Fixed width */
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	border: 1px solid #ccc;
+	padding: 20px;
+	border-radius: 8px;
+	background-color: #494949;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 90%;
+	/* Adjust based on your design */
+	width: 400px;
+	/* Fixed width */
 }
-dialog > * {
-    color:#ffffff
+
+dialog>* {
+	color: #ffffff
 }
-dialog > textarea {
-    color:black
+
+dialog>textarea {
+	color: black
+}
+
+.loginContainer {
+	display: flex;
+	justify-content: center;
+	/* Horizontal centering */
+	align-items: center;
+	/* Vertical centering */
+	height: 100vh;
+	/* Full viewport height */
+}
+
+.login {
+	text-align: center;
+	width: 300px;
+	padding: 20px;
+	background: #eee;
+	border-radius: 8px;
+}
+
+* {
+	font-family: "JetBrains Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 }
