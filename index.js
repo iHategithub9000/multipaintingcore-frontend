@@ -468,7 +468,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 if (localStorage.getItem("username")) {
     document.getElementById("username").value = localStorage.getItem("username")
 }
-document.getElementById('serverAddress').value = "wss://multipaintingcore-official-backend.onrender.com/"
+document.getElementById('serverAddress').value = "wss://localhost:8000"
 if (localStorage.getItem("serverAddress")) {
     document.getElementById("serverAddress").value = localStorage.getItem("serverAddress")
 }
