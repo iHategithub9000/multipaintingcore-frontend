@@ -1,67 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cell machine remake</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js" async></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>multiplayer paint</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="index.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Quicksand:wght@500&family=Roboto+Condensed:ital,wght@0,286;1,286&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <div class="loginContainer">
     <div class="login">
-        <h1>Login</h1>
-        <h2>Server address</h2>
-        <input type="text" id="serverAddress">
-        <h2>Username</h2>
-        <input type="text" id="username">
-        <br>
-        <input type="checkbox" id="mouseControlSwap">
-        Swap mouse controls
-        <br>
-        <br>
-        <button id="connectButton">Connect</button>
-    </div>
-    <dialog id="kick">
-        <h2>Disconnected</h2>
-        <p id="reason">No reason provided!</p>
-        <button class="right disconnect" onclick = "location.reload()">Refresh</button>
-    </dialog>
-    <div class="game">
-        <div class="grid">
-            <canvas id="gridCanvas"></canvas>
-        </div>
-        <div class="colors">
-             0 - White<br>
- 1 - Black   <br>
- 2 - Red       <br>
- 3 - Green     <br>
- 4 - Blue      <br>
- 5 - Yellow    <br>
- 6 - Cyan      <br>
- 7 - Magenta   <br>
- 8 - Gray      <br>
- 9 - Orange    <br>
-10 - Brown     <br>
-11 - Pink      <br>
-12 - Light Blue<br>
-13 - Dark Green<br>
-14 - Light Gray<br>
-15 - Dark Gray <br>
-16 - Gold      <br>
-17 - Violet    <br>
-18 - Lime      <br>
-<input type="text" id="colorBox" placeholder="0"><br>
-<button id="select">Select</button>
-        </div>
-        <div class="chatarea">
-            <div id="messagebundle"></div>
-            <input type="text" id="chatBox" placeholder="Press enter to send message.">
-        </div>
-        <div id="playerlist"><div id="motd"></div></div>
-    </div>
-    <div style="display: none;">
-        <canvas id="fingerprint_canvas_api"></canvas>
-        <canvas id="fingerprint_canvas_webgl"></canvas>
-    </div>
+		<h1>Connect</h1>
+		<h2>Server address</h2>
+		<input type="text" id="serverAddress">
+		<h2>Username</h2>
+		<input type="text" id="username">
+		<br>
+		<input type="checkbox" id="mouseControlSwap"> Swap mouse controls <br>
+		<br>
+		<button id="connectButton">Connect</button>
+	</div>
+  </div>
+	<dialog id="kick">
+		<h2>Disconnected</h2>
+		<p id="reason">No reason provided!</p>
+		<button class="right disconnect" onclick="location.reload()">Refresh</button>
+	</dialog>
+	<div class="game">
+		<div class="grid">
+			<canvas id="gridCanvas"></canvas>
+		</div>
+		<div class="colors"> 0 - White<br> 1 - Black <br> 2 - Red <br> 3 - Green <br> 4 - Blue <br> 5 - Yellow
+			<br> 6 - Cyan <br> 7 - Magenta <br> 8 - Gray <br> 9 - Orange <br> 10 - Brown <br> 11 - Pink <br>
+			12 - Light Blue<br> 13 - Dark Green<br> 14 - Light Gray<br> 15 - Dark Gray <br> 16 - Gold <br> 17
+			- Violet <br> 18 - Lime <br>
+			<input type="text" id="colorBox" placeholder="0"><br>
+			<button id="select">Select</button>
+		</div>
+		<div class="chatarea">
+			<div id="messagebundle"></div>
+			<input type="text" id="chatBox" placeholder="Press enter to send message.">
+		</div>
+		<div id="playerlist">
+			<div id="motd"></div>
+		</div>
+	</div>
 </body>
+
 </html>
