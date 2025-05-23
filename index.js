@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
-	let ws;
+let ws;
 	let messageBuffer = [];
 	let messageCallback = null;
 	let world = [];
@@ -31,7 +30,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 		players: [],
 		username: ''
 	}
-	const IMAGES = [];
+  const IMAGES = [];
+document.addEventListener('DOMContentLoaded', async () => {
+
+	
 	async function getImages() {
 		for (let i = 0; i <= 18; i++) {
 			const image = await fetch(`./assets/${i}.png`);
@@ -129,6 +131,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 				case "plr":
 					gameInfo.players = message.data;
 					let pl = document.getElementById('playerlist');
+          pl.innerHTML='<div id="motd">'+document.getElementById('motd').innerText+'</div><br>'
 					for (const player of gameInfo.players) {
 						let pe = document.createElement('div');
 						pe.innerText = player
@@ -498,7 +501,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	if (localStorage.getItem("username")) {
 		document.getElementById("username").value = localStorage.getItem("username")
 	}
-	document.getElementById('serverAddress').value = "ws://localhost:8000"
+	document.getElementById('serverAddress').value = "ws://localhost:8080/"
 	if (localStorage.getItem("serverAddress")) {
 		document.getElementById("serverAddress").value = localStorage.getItem("serverAddress")
 	}
